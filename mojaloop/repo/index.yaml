@@ -1,0 +1,1397 @@
+apiVersion: v1
+entries:
+  account-lookup-service:
+  - apiVersion: v2
+    appVersion: 'account-lookup-service: v17.7.1; als-oracle-pathfinder: v12.1.3'
+    created: "2025-07-11T10:38:41.208381Z"
+    dependencies:
+    - condition: account-lookup-service.enabled
+      name: account-lookup-service
+      repository: file://./chart-service
+      version: '>= 15.0.0'
+    - condition: account-lookup-service-admin.enabled
+      name: account-lookup-service-admin
+      repository: file://./chart-admin
+      version: '>= 15.0.0'
+    - condition: account-lookup-service-handler-timeout.enabled
+      name: account-lookup-service-handler-timeout
+      repository: file://./chart-handler-timeout
+      version: '>= 2.0.0'
+    - condition: als-oracle-pathfinder.enabled
+      name: als-oracle-pathfinder
+      repository: file://../als-oracle-pathfinder
+      version: '>= 13.5.0'
+    - name: common
+      repository: https://mojaloop.github.io/charts/repo
+      tags:
+      - moja-common
+      version: 3.1.3
+    description: Account Lookup Service Helm Chart for Mojaloop
+    digest: 7d3bcbbfd252a2812c749a559ce7fba5fcf8a9b1c38ffbf6e4092d4291616426
+    maintainers:
+    - email: miguel.debarros@modusbox.com
+      name: Miguel de Barros
+    - email: steven.oderayi@infitx.com
+      name: Steven Oderayi
+    name: account-lookup-service
+    urls:
+    - https://mojalab-tg.github.io/charts/mojaloop/repo/account-lookup-service-15.0.0.tgz
+    version: 15.0.0
+  als-msisdn-oracle:
+  - apiVersion: v2
+    appVersion: v0.0.14
+    created: "2025-07-11T10:38:41.209185Z"
+    dependencies:
+    - name: common
+      repository: https://mojaloop.github.io/charts/repo
+      tags:
+      - moja-common
+      version: 3.1.1
+    description: als-msisdn-oracle chart for Mojaloop Services
+    digest: 1942ca7cd8b084ae6563d6d58e8c0eb7558c9d464e12823fd298d05152de87a2
+    home: http://mojaloop.io
+    icon: http://mojaloop.io/images/logo.png
+    maintainers:
+    - email: vijaya.guthi@infitx.com
+      name: Vijay Kumar Guthi
+    name: als-msisdn-oracle
+    sources:
+    - https://github.com/mojaloop/mojaloop
+    - https://github.com/mojaloop/helm
+    - https://github.com/mojaloop/als-msisdn-oracle-svc
+    urls:
+    - https://mojalab-tg.github.io/charts/mojaloop/repo/als-msisdn-oracle-1.0.0.tgz
+    version: 1.0.0
+  als-oracle-pathfinder:
+  - apiVersion: v2
+    appVersion: v12.1.3
+    created: "2025-07-11T10:38:41.210195Z"
+    dependencies:
+    - name: common
+      repository: https://mojaloop.github.io/charts/repo
+      tags:
+      - moja-common
+      version: 3.1.3
+    description: A PathFinder oracle for ALS. Resolves MSISDN to participant ID.
+    digest: e13814b043f67f2c30829c5c6694988b1504992591224c5a171876e6df8107a7
+    home: http://mojaloop.io
+    icon: http://mojaloop.io/images/logo.png
+    maintainers:
+    - email: miguel.debarros@modusbox.com
+      name: Miguel de Barros
+    name: als-oracle-pathfinder
+    sources:
+    - https://github.com/mojaloop/mojaloop
+    - https://github.com/mojaloop/helm
+    - https://github.com/mojaloop/als-oracle-pathfinder
+    urls:
+    - https://mojalab-tg.github.io/charts/mojaloop/repo/als-oracle-pathfinder-13.5.0.tgz
+    version: 13.5.0
+  auth-svc:
+  - apiVersion: v2
+    appVersion: v15.1.2
+    created: "2025-07-11T10:38:41.211122Z"
+    dependencies:
+    - name: common
+      repository: https://mojaloop.github.io/charts/repo
+      tags:
+      - moja-common
+      version: 3.1.3
+    description: auth-svc chart for Mojaloop Thirdparty Services
+    digest: 5171e352c1048bb47f0b6938e0f3515d7b655577b74eecd3369fcd73526a57ab
+    home: http://mojaloop.io
+    icon: http://mojaloop.io/images/logo.png
+    maintainers:
+    - email: miguel.debarros@modusbox.com
+      name: Miguel de Barros
+    name: auth-svc
+    sources:
+    - https://github.com/mojaloop/mojaloop
+    - https://github.com/mojaloop/helm
+    - https://github.com/mojaloop/auth-service
+    urls:
+    - https://mojalab-tg.github.io/charts/mojaloop/repo/auth-svc-3.5.0.tgz
+    version: 3.5.0
+  bulk-api-adapter:
+  - apiVersion: v2
+    appVersion: v17.1.9
+    created: "2025-07-11T10:38:41.213184Z"
+    dependencies:
+    - condition: bulk-api-adapter-service.enabled
+      name: bulk-api-adapter-service
+      repository: file://./chart-service
+      version: '>= 14.6.0'
+    - condition: bulk-api-adapter-handler-notification.enabled
+      name: bulk-api-adapter-handler-notification
+      repository: file://./chart-handler-notification
+      version: '>= 14.5.0'
+    - name: common
+      repository: https://mojaloop.github.io/charts/repo
+      tags:
+      - moja-common
+      version: 3.1.3
+    description: bulk-api-adapter Helm chart for Kubernetes
+    digest: 3c604cc3a94db1f06b57138773102b0599b2c0f46356c568b0743dd36264e66b
+    home: http://mojaloop.io
+    icon: http://mojaloop.io/images/logo.png
+    maintainers:
+    - email: miguel.debarros@modusbox.com
+      name: Miguel de Barros
+    - email: steven.oderayi@infitx.com
+      name: Steven Oderayi
+    name: bulk-api-adapter
+    sources:
+    - https://github.com/mojaloop/mojaloop
+    - https://github.com/mojaloop/helm
+    - https://github.com/mojaloop/bulk-api-adapter
+    urls:
+    - https://mojalab-tg.github.io/charts/mojaloop/repo/bulk-api-adapter-14.10.0.tgz
+    version: 14.10.0
+  bulk-centralledger:
+  - apiVersion: v2
+    appVersion: v19.3.0
+    created: "2025-07-11T10:38:41.216594Z"
+    dependencies:
+    - condition: cl-handler-bulk-transfer-prepare.enabled
+      name: cl-handler-bulk-transfer-prepare
+      repository: file://./chart-handler-bulk-transfer-prepare
+      version: '>= 14.7.0'
+    - condition: cl-handler-bulk-transfer-fulfil.enabled
+      name: cl-handler-bulk-transfer-fulfil
+      repository: file://./chart-handler-bulk-transfer-fulfil
+      version: '>= 14.7.0'
+    - condition: cl-handler-bulk-transfer-processing.enabled
+      name: cl-handler-bulk-transfer-processing
+      repository: file://./chart-handler-bulk-transfer-processing
+      version: '>= 14.7.0'
+    - condition: cl-handler-bulk-transfer-get.enabled
+      name: cl-handler-bulk-transfer-get
+      repository: file://./chart-handler-bulk-transfer-get
+      version: '>= 14.5.0'
+    - name: common
+      repository: https://mojaloop.github.io/charts/repo
+      tags:
+      - moja-common
+      version: 3.1.3
+    description: Central-Ledger Bulk Services Helm chart for Kubernetes
+    digest: ff7a896da67652948099c1c6b014f390978afe2401b8bd41e05827fbfbb3da1a
+    home: http://mojaloop.io
+    icon: http://mojaloop.io/images/logo.png
+    maintainers:
+    - email: miguel.debarros@modusbox.com
+      name: Miguel de Barros
+    - email: steven.oderayi@infitx.com
+      name: Steven Oderayi
+    name: bulk-centralledger
+    sources:
+    - https://github.com/mojaloop/mojaloop
+    - https://github.com/mojaloop/helm
+    - https://github.com/mojaloop/central-ledger
+    urls:
+    - https://mojalab-tg.github.io/charts/mojaloop/repo/bulk-centralledger-14.16.0.tgz
+    version: 14.16.0
+  centraleventprocessor:
+  - apiVersion: v2
+    appVersion: v12.1.1
+    created: "2025-07-11T10:38:41.217427Z"
+    dependencies:
+    - name: common
+      repository: https://mojaloop.github.io/charts/repo
+      tags:
+      - moja-common
+      version: 3.1.3
+    description: Central Event Processor for Mojaloop
+    digest: 609cf776e83167aa9e874e45778c20fe656abd8a9a1f78f848c6db93526ac9a1
+    home: http://mojaloop.io
+    icon: http://mojaloop.io/images/logo.png
+    maintainers:
+    - email: miguel.debarros@modusbox.com
+      name: Miguel de Barros
+    name: centraleventprocessor
+    sources:
+    - https://github.com/mojaloop/mojaloop
+    - https://github.com/mojaloop/helm
+    - https://github.com/mojaloop/central-event-processor
+    urls:
+    - https://mojalab-tg.github.io/charts/mojaloop/repo/centraleventprocessor-13.5.0.tgz
+    version: 13.5.0
+  centralledger:
+  - apiVersion: v2
+    appVersion: v14.0.4
+    created: "2025-07-11T10:38:41.223866Z"
+    dependencies:
+    - condition: centralledger-service.enabled
+      name: centralledger-service
+      repository: file://./chart-service
+      version: '>= 14.7.2'
+    - condition: centralledger-handler-transfer-prepare.enabled
+      name: centralledger-handler-transfer-prepare
+      repository: file://./chart-handler-transfer-prepare
+      version: '>= 14.7.2'
+    - condition: centralledger-handler-transfer-position.enabled
+      name: centralledger-handler-transfer-position
+      repository: file://./chart-handler-transfer-position
+      version: '>= 14.7.2'
+    - condition: centralledger-handler-transfer-position-batch.enabled
+      name: centralledger-handler-transfer-position-batch
+      repository: file://./chart-handler-transfer-position-batch
+      version: '>= 14.7.2'
+    - condition: centralledger-handler-transfer-get.enabled
+      name: centralledger-handler-transfer-get
+      repository: file://./chart-handler-transfer-get
+      version: '>= 14.7.2'
+    - condition: centralledger-handler-transfer-fulfil.enabled
+      name: centralledger-handler-transfer-fulfil
+      repository: file://./chart-handler-transfer-fulfil
+      version: '>= 14.7.2'
+    - condition: centralledger-handler-timeout.enabled
+      name: centralledger-handler-timeout
+      repository: file://./chart-handler-timeout
+      version: '>= 14.7.2'
+    - condition: centralledger-handler-transfer-get.enabled
+      name: centralledger-handler-admin-transfer
+      repository: file://./chart-handler-admin-transfer
+      version: '>= 14.5.1'
+    - name: common
+      repository: https://mojaloop.github.io/charts/repo
+      tags:
+      - moja-common
+      version: '>= 3.1.3'
+    description: Central-Ledger Helm chart for Kubernetes
+    digest: 0aa41c721393275f39b60d5422c8eba9787d63d023756141cf4d6a17c4eed544
+    home: http://mojaloop.io
+    icon: http://mojaloop.io/images/logo.png
+    maintainers:
+    - email: miguel.debarros@modusbox.com
+      name: Miguel de Barros
+    - email: steven.oderayi@infitx.com
+      name: Steven Oderayi
+    name: centralledger
+    sources:
+    - https://github.com/mojaloop/mojaloop
+    - https://github.com/mojaloop/helm
+    - https://github.com/mojaloop/central-ledger
+    urls:
+    - https://mojalab-tg.github.io/charts/mojaloop/repo/centralledger-14.41.2.tgz
+    version: 14.41.2
+  centralsettlement:
+  - apiVersion: v2
+    appVersion: v17.0.6
+    created: "2025-07-11T10:38:41.22651Z"
+    dependencies:
+    - alias: centralsettlement-service
+      condition: centralsettlement-service.enabled
+      name: centralsettlement-service
+      repository: file://./chart-service
+      version: '>= 15.4.0'
+    - alias: centralsettlement-handler-deferredsettlement
+      condition: centralsettlement-handler-deferredsettlement.enabled
+      name: centralsettlement-service
+      repository: file://./chart-service
+      version: '>= 15.4.0'
+    - alias: centralsettlement-handler-grosssettlement
+      condition: centralsettlement-handler-grosssettlement.enabled
+      name: centralsettlement-service
+      repository: file://./chart-service
+      version: '>= 15.4.0'
+    - alias: centralsettlement-handler-rules
+      condition: centralsettlement-handler-rules.enabled
+      name: centralsettlement-service
+      repository: file://./chart-service
+      version: '>= 15.4.0'
+    - name: common
+      repository: https://mojaloop.github.io/charts/repo
+      tags:
+      - moja-common
+      version: 3.1.1
+    description: Central-Settlement Helm chart for Kubernetes
+    digest: 721975e3dc8c09399b6ba2f9c8c114bca8fd49f29db02c53a24d00ab491f8620
+    home: http://mojaloop.io
+    icon: http://mojaloop.io/images/logo.png
+    maintainers:
+    - email: miguel.debarros@modusbox.com
+      name: Miguel de Barros
+    - email: steven.oderayi@infitx.com
+      name: Steven Oderayi
+    name: centralsettlement
+    sources:
+    - https://github.com/mojaloop/mojaloop
+    - https://github.com/mojaloop/helm
+    - https://github.com/mojaloop/central-settlement
+    urls:
+    - https://mojalab-tg.github.io/charts/mojaloop/repo/centralsettlement-14.19.0.tgz
+    version: 14.19.0
+  consent-oracle:
+  - apiVersion: v2
+    appVersion: v1.0.1
+    created: "2025-07-11T10:38:41.227255Z"
+    dependencies:
+    - name: common
+      repository: https://mojaloop.github.io/charts/repo
+      tags:
+      - moja-common
+      version: 3.1.3
+    description: consent-oracle chart for Mojaloop Thirdparty Overlay Services
+    digest: 1caa6bc7c06cc7c31d46db95dc36bf4a26898939260f186b181643f42e653124
+    home: http://mojaloop.io
+    icon: http://mojaloop.io/images/logo.png
+    maintainers:
+    - email: miguel.debarros@modusbox.com
+      name: Miguel de Barros
+    name: consent-oracle
+    sources:
+    - https://github.com/mojaloop/mojaloop
+    - https://github.com/mojaloop/helm
+    - https://github.com/mojaloop/als-consent-oracle
+    urls:
+    - https://mojalab-tg.github.io/charts/mojaloop/repo/consent-oracle-0.9.0.tgz
+    version: 0.9.0
+  efk:
+  - apiVersion: v2
+    appVersion: 'elasticsearch: 7.11.1; kibana: 7.11.1; apm-server: 7.11.1; fluentd-elasticsearch:
+      3.2.0'
+    created: "2025-07-11T10:38:41.230446Z"
+    dependencies:
+    - condition: fluentd-elasticsearch.enabled
+      name: fluentd-elasticsearch
+      repository: https://kokuwaio.github.io/helm-charts
+      version: 11.8.0
+    - condition: elasticsearch.enabled
+      name: elasticsearch
+      repository: https://helm.elastic.co
+      version: 7.9.3
+    - condition: kibana.enabled
+      name: kibana
+      repository: https://helm.elastic.co
+      version: 7.9.3
+    - condition: apm-server.enabled
+      name: apm-server
+      repository: https://helm.elastic.co
+      version: 7.9.3
+    - name: common
+      repository: https://mojaloop.github.io/charts/repo
+      tags:
+      - moja-common
+      version: 2.0.0
+    description: A Helm chart containing ELK for Kubernetes
+    digest: 49dffd6eddb32a02d9d20ac666200c42a62ed84a85e92a860bc5ec32030bda4a
+    maintainers:
+    - email: miguel.debarros@modusbox.com
+      name: Miguel de Barros
+    name: efk
+    urls:
+    - https://mojalab-tg.github.io/charts/mojaloop/repo/efk-12.1.0.tgz
+    version: 12.1.0
+  emailnotifier:
+  - apiVersion: v2
+    appVersion: v14.0.3
+    created: "2025-07-11T10:38:41.231144Z"
+    dependencies:
+    - name: common
+      repository: https://mojaloop.github.io/charts/repo
+      tags:
+      - moja-common
+      version: 3.1.3
+    description: Email Notifier For Mojaloop
+    digest: fddf79319c032bbb2395588dc742551852c09f3a60e6c330dd43e283d22dc393
+    home: http://mojaloop.io
+    icon: http://mojaloop.io/images/logo.png
+    maintainers:
+    - email: valentin.genev@modusbox.com
+      name: Valentin Genev
+    - email: deon.botha@modusbox.com
+      name: Deon Botha
+    name: emailnotifier
+    sources:
+    - https://github.com/mojaloop/mojaloop
+    - https://github.com/mojaloop/helm
+    - https://github.com/mojaloop/email-notifier
+    urls:
+    - https://mojalab-tg.github.io/charts/mojaloop/repo/emailnotifier-13.5.0.tgz
+    version: 13.5.0
+  eventstreamprocessor:
+  - apiVersion: v2
+    appVersion: v12.0.0-snapshot.14
+    created: "2025-07-11T10:38:41.231872Z"
+    dependencies:
+    - name: common
+      repository: https://mojaloop.github.io/charts/repo
+      tags:
+      - moja-common
+      version: 3.1.3
+    description: Event Stream Processor for Mojaloop
+    digest: dbba7d8dd563a53598ca46df9944621502ce4487bdac2ab0459cf72125758120
+    home: http://mojaloop.io
+    icon: http://mojaloop.io/images/logo.png
+    maintainers:
+    - email: miguel.debarros@modusbox.com
+      name: Miguel de Barros
+    name: eventstreamprocessor
+    sources:
+    - https://github.com/mojaloop/mojaloop
+    - https://github.com/mojaloop/helm
+    - https://github.com/mojaloop/event-stream-processor
+    urls:
+    - https://mojalab-tg.github.io/charts/mojaloop/repo/eventstreamprocessor-13.5.0.tgz
+    version: 13.5.0
+  example-mojaloop-backend:
+  - apiVersion: v2
+    appVersion: 'nginx: 4.12.0; mysql: 9.19.1; kafka: 31.5.0; mongodb: 16.4.9; redis:
+      20.11.4'
+    created: "2025-07-11T10:38:41.24679Z"
+    dependencies:
+    - alias: kafka
+      condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - mojaloop
+      - dependency
+      - backend
+      - kafka
+      version: 31.5.0
+    - alias: mysql
+      condition: mysql.enabled
+      name: mysql
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - mojaloop
+      - dependency
+      - backend
+      - mysql
+      - centralledger
+      - account-lookup
+      version: 9.19.1
+    - alias: cl-mongodb
+      condition: cl-mongodb.enabled
+      name: mongodb
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - mojaloop
+      - dependency
+      - backend
+      - mongodb
+      - centralledger
+      version: 16.4.9
+    - alias: cep-mongodb
+      condition: cep-mongodb.enabled
+      name: mongodb
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - mojaloop
+      - dependency
+      - backend
+      - mongodb
+      - centralledger
+      version: 16.4.9
+    - alias: ttk-mongodb
+      condition: ttk-mongodb.enabled
+      name: mongodb
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - mojaloop
+      - dependency
+      - backend
+      - mongodb
+      - centralledger
+      version: 16.4.9
+    - alias: ttksims-redis
+      condition: ttksims-redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - mojaloop
+      - dependency
+      - backend
+      - redis
+      - sdk
+      - bulk
+      - ttksims
+      version: 20.11.4
+    - alias: auth-svc-redis
+      condition: auth-svc-redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - mojaloop
+      - dependency
+      - backend
+      - redis
+      - thirdparty
+      version: 20.11.4
+    - alias: proxy-cache-redis
+      condition: proxy-cache-redis.enabled
+      name: redis-cluster
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - mojaloop
+      - dependency
+      - backend
+      - redis
+      - proxy
+      version: 10.2.8
+    - alias: proxy-cache-redis-standalone
+      condition: proxy-cache-redis-standalone.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - mojaloop
+      - dependency
+      - backend
+      - redis
+      - proxy
+      version: 20.11.4
+    description: Example Helm chart for mojaloop backend dependencies
+    digest: f4a1b47d44ec0cb132c57026d4be2550dd797b5026f8678e3e0bd4e165531eb1
+    home: http://mojaloop.io
+    icon: http://mojaloop.io/images/logo.png
+    maintainers:
+    - email: miguel.debarros@modusbox.com
+      name: Miguel de Barros
+    - email: vijaya.guthi@modusbox.com
+      name: Vijay Kumar Guthi
+    - email: skummary@mojaloop.io
+      name: Sam Kummary
+    name: example-mojaloop-backend
+    sources:
+    - https://github.com/mojaloop/mojaloop
+    - https://github.com/mojaloop/helm
+    urls:
+    - https://mojalab-tg.github.io/charts/mojaloop/repo/example-mojaloop-backend-17.0.0.tgz
+    version: 17.0.0
+  inter-scheme-proxy-adapter:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2025-07-11T10:38:41.247778Z"
+    dependencies:
+    - name: common
+      repository: https://mojaloop.github.io/charts/repo
+      tags:
+      - moja-common
+      version: '>= 3.1.3'
+    description: Helm chart for Inter Scheme Proxy Adapter
+    digest: d0415a64cb0be2a23e4be8552e0f11933c23e3521cbdc7054b24272755e41aea
+    maintainers:
+    - email: steven.oderayi@infitx.com
+      name: Steven Oderayi
+    - email: vijaya.guthi@infitx.com
+      name: Vijaya Kumar Guthi
+    name: inter-scheme-proxy-adapter
+    urls:
+    - https://mojalab-tg.github.io/charts/mojaloop/repo/inter-scheme-proxy-adapter-1.0.0.tgz
+    version: 1.0.0
+  merchant-registry:
+  - apiVersion: v2
+    appVersion: 1.0.1
+    created: "2025-07-11T10:38:41.248648Z"
+    dependencies:
+    - name: chart-acquirer-backend
+      repository: file://./chart-acquirer-backend
+      version: '>= 1.0.0'
+    - name: chart-acquirer-frontend
+      repository: file://./chart-acquirer-frontend
+      version: '>= 1.0.0'
+    - name: chart-merchant-db
+      repository: file://./chart-merchant-db
+      version: '>= 1.0.0'
+    - name: chart-minio
+      repository: file://./chart-minio
+      version: '>= 1.0.0'
+    - name: chart-rabbitmq
+      repository: file://./chart-rabbitmq
+      version: '>= 1.0.0'
+    - name: chart-registry-oracle
+      repository: file://./chart-registry-oracle
+      version: '>= 1.0.0'
+    description: Merchant Registry Helm chart for Kubernetes
+    digest: 4c0ef87d34f9b9be7debafd9dac2d810a84bde4418b22c887184b0e164ef3dce
+    name: merchant-registry
+    type: application
+    urls:
+    - https://mojalab-tg.github.io/charts/mojaloop/repo/merchant-registry-1.0.1.tgz
+    version: 1.0.1
+  ml-api-adapter:
+  - apiVersion: v2
+    appVersion: v16.4.1
+    created: "2025-07-11T10:38:41.250626Z"
+    dependencies:
+    - condition: ml-api-adapter-service.enabled
+      name: ml-api-adapter-service
+      repository: file://./chart-service
+      version: '>= 14.0.0'
+    - condition: ml-api-adapter-handler-notification.enabled
+      name: ml-api-adapter-handler-notification
+      repository: file://./chart-handler-notification
+      version: '>= 14.0.0'
+    - name: common
+      repository: https://mojaloop.github.io/charts/repo
+      tags:
+      - moja-common
+      version: 3.1.3
+    description: ml-api-adapter Helm chart for Kubernetes
+    digest: 4b137880756543ed377b29bb33bf1ae96dc5d231aaa8f896669e2fbd9b4075aa
+    home: http://mojaloop.io
+    icon: http://mojaloop.io/images/logo.png
+    maintainers:
+    - email: miguel.debarros@modusbox.com
+      name: Miguel de Barros
+    - email: steven.oderayi@infitx.com
+      name: Steven Oderayi
+    name: ml-api-adapter
+    sources:
+    - https://github.com/mojaloop/mojaloop
+    - https://github.com/mojaloop/helm
+    - https://github.com/mojaloop/ml-api-adapter
+    urls:
+    - https://mojalab-tg.github.io/charts/mojaloop/repo/ml-api-adapter-14.0.0.tgz
+    version: 14.0.0
+  ml-operator:
+  - apiVersion: v2
+    appVersion: 0.1.3
+    created: "2025-07-11T10:38:41.251344Z"
+    dependencies:
+    - name: common
+      repository: https://mojaloop.github.io/charts/repo
+      tags:
+      - moja-common
+      version: 3.1.3
+    description: ml-operator makes running and managing a Mojaloop deployment easier
+    digest: f082b14456cdd69be7bf70cad7edc2c0aa46596b251416563f788662ff1273a8
+    home: http://mojaloop.io
+    icon: http://mojaloop.io/images/logo.png
+    maintainers:
+    - email: miguel.debarros@modusbox.com
+      name: Miguel de Barros
+    name: ml-operator
+    sources:
+    - https://github.com/mojaloop/ml-operator
+    - https://github.com/mojaloop/helm
+    type: application
+    urls:
+    - https://mojalab-tg.github.io/charts/mojaloop/repo/ml-operator-0.5.0.tgz
+    version: 0.5.0
+  ml-testing-toolkit:
+  - apiVersion: v2
+    appVersion: 'ml-testing-toolkit: v18.11.2; ml-testing-toolkit-ui: v16.2.0'
+    created: "2025-07-11T10:38:41.252947Z"
+    dependencies:
+    - condition: ml-testing-toolkit-frontend.enabled
+      name: ml-testing-toolkit-frontend
+      repository: file://./chart-frontend
+      version: '>= 15.10.0'
+    - condition: ml-testing-toolkit-backend.enabled
+      name: ml-testing-toolkit-backend
+      repository: file://./chart-backend
+      version: '>= 17.0.0'
+    - name: common
+      repository: https://mojaloop.github.io/charts/repo
+      tags:
+      - moja-common
+      version: 3.1.3
+    description: ml-testing-toolkit Helm chart for Kubernetes
+    digest: abcf71b0b60ab5e68f58585cf8bf45204bdc40a55c067ff9da2dd8d77a876e33
+    home: http://mojaloop.io
+    icon: http://mojaloop.io/images/logo.png
+    maintainers:
+    - email: vijaya.guthi@modusbox.com
+      name: Vijay Kumar
+    - email: miguel.debarros@modusbox.com
+      name: Miguel de Barros
+    - email: steven.oderayi@infitx.com
+      name: Steven Oderayi
+    name: ml-testing-toolkit
+    sources:
+    - https://github.com/mojaloop/mojaloop
+    - https://github.com/mojaloop/helm
+    - https://github.com/mojaloop/ml-testing-toolkit
+    - https://github.com/mojaloop/ml-testing-toolkit-ui
+    - https://github.com/modusbox/connection-manager-api
+    - https://github.com/modusbox/connection-manager-ui
+    urls:
+    - https://mojalab-tg.github.io/charts/mojaloop/repo/ml-testing-toolkit-17.7.1.tgz
+    version: 17.7.1
+  ml-testing-toolkit-cli:
+  - apiVersion: v2
+    appVersion: v1.9.0
+    created: "2025-07-11T10:38:41.253712Z"
+    dependencies:
+    - name: common
+      repository: https://mojaloop.github.io/charts/repo
+      tags:
+      - moja-common
+      version: 3.1.3
+    description: ml-testing-toolkit-cli Helm chart for Kubernetes
+    digest: dbe8fc474b6d6aabee111c89c42b6990b522d375114d2f1fc1a31dca63d73ff1
+    home: http://mojaloop.io
+    icon: http://mojaloop.io/images/logo.png
+    maintainers:
+    - email: vijaya.guthi@modusbox.com
+      name: Vijay Kumar Guthi
+    - email: miguel.debarros@modusbox.com
+      name: Miguel de Barros
+    name: ml-testing-toolkit-cli
+    sources:
+    - https://github.com/mojaloop/mojaloop
+    - https://github.com/mojaloop/helm
+    - https://github.com/mojaloop/ml-testing-toolkit
+    urls:
+    - https://mojalab-tg.github.io/charts/mojaloop/repo/ml-testing-toolkit-cli-15.9.0.tgz
+    version: 15.9.0
+  mojaloop:
+  - apiVersion: v2
+    appVersion: 'ml-api-adapter: v16.4.1; central-ledger: v19.6.0; account-lookup-service:
+      v17.7.1; quoting-service: v17.7.1; central-settlement: v17.0.6; bulk-api-adapter:
+      v17.1.9; transaction-requests-service: v14.3.9; simulator: v12.2.5; mojaloop-simulator:
+      v15.3.0; sdk-scheme-adapter: v24.6.3; auth-service: v15.1.2; als-consent-oracle:
+      v1.0.1; thirdparty-sdk: v15.1.3; ml-testing-toolkit: v18.11.2; ml-testing-toolkit-ui:
+      v16.2.0;'
+    created: "2025-07-11T10:38:41.317151Z"
+    dependencies:
+    - condition: account-lookup-service.enabled
+      name: account-lookup-service
+      repository: file://../account-lookup-service
+      version: '>= 15.0.0'
+    - condition: quoting-service.enabled
+      name: quoting-service
+      repository: file://../quoting-service
+      version: '>= 16.0.0'
+    - condition: ml-api-adapter.enabled
+      name: ml-api-adapter
+      repository: file://../ml-api-adapter
+      version: '>= 14.0.0'
+    - condition: centralledger.enabled
+      name: centralledger
+      repository: file://../centralledger
+      version: '>= 14.41.2'
+    - condition: centralsettlement.enabled
+      name: centralsettlement
+      repository: file://../centralsettlement
+      version: '>= 14.19.0'
+    - condition: simulator.enabled
+      name: simulator
+      repository: file://../simulator
+      version: '>= 13.5.0'
+    - condition: als-msisdn-oracle.enabled
+      name: als-msisdn-oracle
+      repository: file://../als-msisdn-oracle
+      version: '>= 1.0.0'
+    - condition: mojaloop-simulator.enabled
+      name: mojaloop-simulator
+      repository: file://../mojaloop-simulator
+      version: '>= 15.7.0'
+    - condition: mojaloop-bulk.enabled
+      name: mojaloop-bulk
+      repository: file://../mojaloop-bulk
+      version: '>= 16.18.0'
+    - condition: transaction-requests-service.enabled
+      name: transaction-requests-service
+      repository: file://../transaction-requests-service
+      version: '>= 13.6.0'
+    - condition: thirdparty.enabled
+      name: thirdparty
+      repository: file://../thirdparty
+      version: '>= 3.18.0'
+    - condition: mojaloop-ttk-simulators.enabled
+      name: mojaloop-ttk-simulators
+      repository: file://../mojaloop-ttk-simulators
+      version: '>= 3.0.0'
+    - name: common
+      repository: https://mojaloop.github.io/charts/repo
+      tags:
+      - moja-common
+      version: 3.1.3
+    - condition: ml-testing-toolkit.enabled
+      name: ml-testing-toolkit
+      repository: file://../ml-testing-toolkit
+      version: '>= 17.7.1'
+    - alias: ml-ttk-test-setup
+      condition: ml-ttk-test-setup.tests.enabled
+      name: ml-testing-toolkit-cli
+      repository: file://../ml-testing-toolkit-cli
+      version: '>= 15.9.0'
+    - alias: ml-ttk-test-val-gp
+      condition: ml-ttk-test-val-gp.tests.enabled
+      name: ml-testing-toolkit-cli
+      repository: file://../ml-testing-toolkit-cli
+      version: '>= 15.9.0'
+    - alias: ml-ttk-test-val-bulk
+      condition: ml-ttk-test-val-bulk.tests.enabled
+      name: ml-testing-toolkit-cli
+      repository: file://../ml-testing-toolkit-cli
+      version: '>= 15.9.0'
+    - alias: ml-ttk-test-setup-tp
+      condition: ml-ttk-test-setup-tp.tests.enabled
+      name: ml-testing-toolkit-cli
+      repository: file://../ml-testing-toolkit-cli
+      version: '>= 15.9.0'
+    - alias: ml-ttk-test-val-tp
+      condition: ml-ttk-test-val-tp.tests.enabled
+      name: ml-testing-toolkit-cli
+      repository: file://../ml-testing-toolkit-cli
+      version: '>= 15.9.0'
+    - alias: ml-ttk-posthook-setup
+      condition: ml-ttk-posthook-setup.postInstallHook.enabled
+      name: ml-testing-toolkit-cli
+      repository: file://../ml-testing-toolkit-cli
+      version: '>= 15.9.0'
+    - alias: ml-ttk-posthook-tests
+      condition: ml-ttk-posthook-tests.postInstallHook.enabled
+      name: ml-testing-toolkit-cli
+      repository: file://../ml-testing-toolkit-cli
+      version: '>= 15.9.0'
+    - alias: ml-ttk-cronjob-tests
+      condition: ml-ttk-cronjob-tests.scheduling.enabled
+      name: ml-testing-toolkit-cli
+      repository: file://../ml-testing-toolkit-cli
+      version: '>= 15.9.0'
+    - alias: ml-ttk-cronjob-cleanup
+      condition: ml-ttk-cronjob-cleanup.scheduling.enabled
+      name: ml-testing-toolkit-cli
+      repository: file://../ml-testing-toolkit-cli
+      version: '>= 15.9.0'
+    - alias: ml-ttk-test-setup-sdk-bulk
+      condition: ml-ttk-test-setup-sdk-bulk.tests.enabled
+      name: ml-testing-toolkit-cli
+      repository: file://../ml-testing-toolkit-cli
+      version: '>= 15.9.0'
+    - alias: ml-ttk-test-val-sdk-bulk
+      condition: ml-ttk-test-val-sdk-bulk.tests.enabled
+      name: ml-testing-toolkit-cli
+      repository: file://../ml-testing-toolkit-cli
+      version: '>= 15.9.0'
+    - alias: ml-ttk-test-val-sdk-r2p
+      condition: ml-ttk-test-val-sdk-r2p.tests.enabled
+      name: ml-testing-toolkit-cli
+      repository: file://../ml-testing-toolkit-cli
+      version: '>= 15.9.0'
+    - alias: ml-ttk-test-setup-interscheme
+      condition: ml-ttk-test-setup-interscheme.tests.enabled
+      name: ml-testing-toolkit-cli
+      repository: file://../ml-testing-toolkit-cli
+      version: '>= 15.9.0'
+    - alias: ml-ttk-test-val-interscheme
+      condition: ml-ttk-test-val-interscheme.tests.enabled
+      name: ml-testing-toolkit-cli
+      repository: file://../ml-testing-toolkit-cli
+      version: '>= 15.9.0'
+    - alias: ml-ttk-test-cleanup
+      condition: ml-ttk-test-cleanup.tests.enabled
+      name: ml-testing-toolkit-cli
+      repository: file://../ml-testing-toolkit-cli
+      version: '>= 15.9.0'
+    - alias: inter-scheme-proxy-adapter
+      condition: inter-scheme-proxy-adapter.enabled
+      name: inter-scheme-proxy-adapter
+      repository: file://../inter-scheme-proxy-adapter
+      version: '>= 1.0.0'
+    description: Mojaloop Helm chart for Kubernetes
+    digest: a1ad4fa95996accca0d9a8ff0aa79388c29c9d04aebd227cdeff1a8edb11473d
+    home: http://mojaloop.io
+    icon: http://mojaloop.io/images/logo.png
+    maintainers:
+    - email: miguel.debarros@modusbox.com
+      name: Miguel de Barros
+    - email: steven.oderayi@infitx.com
+      name: Steven Oderayi
+    name: mojaloop
+    sources:
+    - https://github.com/mojaloop/mojaloop
+    - https://github.com/mojaloop/helm
+    urls:
+    - https://mojalab-tg.github.io/charts/mojaloop/repo/mojaloop-17.0.2.tgz
+    version: 17.0.2
+  mojaloop-bulk:
+  - apiVersion: v2
+    appVersion: 'bulk-api-adapter: v17.1.9; central-ledger: v19.3.0'
+    created: "2025-07-11T10:38:41.323061Z"
+    dependencies:
+    - condition: bulk-api-adapter.enabled
+      name: bulk-api-adapter
+      repository: file://../bulk-api-adapter
+      version: '>= 14.10.0'
+    - condition: bulk-centralledger.enabled
+      name: bulk-centralledger
+      repository: file://../bulk-centralledger
+      version: '>= 14.16.0'
+    - name: common
+      repository: https://mojaloop.github.io/charts/repo
+      tags:
+      - moja-common
+      version: 3.1.3
+    description: Mojaloop Bulk Helm chart for Kubernetes
+    digest: a165664a7d352e9e2443d3aa075eb4dfec795e7baf9ce449d7960fe58ad27ce3
+    home: http://mojaloop.io
+    icon: http://mojaloop.io/images/logo.png
+    maintainers:
+    - email: miguel.debarros@modusbox.com
+      name: Miguel de Barros
+    - email: steven.oderayi@infitx.com
+      name: Steven Oderayi
+    name: mojaloop-bulk
+    sources:
+    - https://github.com/mojaloop/mojaloop
+    - https://github.com/mojaloop/helm
+    urls:
+    - https://mojalab-tg.github.io/charts/mojaloop/repo/mojaloop-bulk-16.18.0.tgz
+    version: 16.18.0
+  mojaloop-simulator:
+  - apiVersion: v2
+    appVersion: 'sdk-scheme-adapter: v24.6.2; mojaloop-simulator: v15.3.0; thirdparty-sdk:
+      v15.1.3'
+    created: "2025-07-11T10:38:41.324256Z"
+    dependencies:
+    - name: common
+      repository: https://mojaloop.github.io/charts/repo
+      tags:
+      - moja-common
+      version: 3.1.3
+    description: Helm Chart for the Mojaloop (SDK-based) Simulator
+    digest: efb576b9101f3aea2ec5ed53d5f4f7a98a586502effaf90315e91e799c7bd21a
+    maintainers:
+    - email: miguel.debarros@modusbox.com
+      name: Miguel de Barros
+    - email: steven.oderayi@infitx.com
+      name: Steven Oderayi
+    name: mojaloop-simulator
+    urls:
+    - https://mojalab-tg.github.io/charts/mojaloop/repo/mojaloop-simulator-15.7.0.tgz
+    version: 15.7.0
+  mojaloop-ttk-sim1-svc:
+  - apiVersion: v2
+    appVersion: 'ml-testing-toolkit: v18.11.2; ml-testing-toolkit-ui: v16.2.0; sdk-scheme-adapter:
+      v24.6.3'
+    created: "2025-07-11T10:38:41.328736Z"
+    dependencies:
+    - condition: sdk-scheme-adapter.enabled
+      name: sdk-scheme-adapter
+      repository: file://../../sdk-scheme-adapter
+      tags:
+      - sdk-scheme-adapter
+      version: '>= 2.0.0'
+    - condition: ml-testing-toolkit.enabled
+      name: ml-testing-toolkit
+      repository: file://../../ml-testing-toolkit
+      tags:
+      - testing-toolkit
+      version: '>= 17.7.1'
+    - name: common
+      repository: https://mojaloop.github.io/charts/repo
+      tags:
+      - moja-common
+      version: 3.1.3
+    description: A Helm chart for Kubernetes
+    digest: 8313335e1d0c6f2ceeebbd789850b5f0a1368b8113e7a799e43b7842c295c08d
+    home: http://mojaloop.io
+    icon: http://mojaloop.io/images/logo.png
+    maintainers:
+    - email: miguel.debarros@modusbox.com
+      name: Miguel de Barros
+    - email: steven.oderayi@infitx.com
+      name: Steven Oderayi
+    name: mojaloop-ttk-sim1-svc
+    sources:
+    - https://github.com/mojaloop/mojaloop
+    - https://github.com/mojaloop/helm
+    - https://github.com/mojaloop/sdk-scheme-adapter
+    urls:
+    - https://mojalab-tg.github.io/charts/mojaloop/repo/mojaloop-ttk-sim1-svc-3.0.0.tgz
+    version: 3.0.0
+  mojaloop-ttk-sim2-svc:
+  - apiVersion: v2
+    appVersion: 'ml-testing-toolkit: v18.11.2; ml-testing-toolkit-ui: v16.2.0; sdk-scheme-adapter:
+      v24.6.3'
+    created: "2025-07-11T10:38:41.333188Z"
+    dependencies:
+    - condition: sdk-scheme-adapter.enabled
+      name: sdk-scheme-adapter
+      repository: file://../../sdk-scheme-adapter
+      tags:
+      - sdk-scheme-adapter
+      version: '>= 2.0.0'
+    - condition: ml-testing-toolkit.enabled
+      name: ml-testing-toolkit
+      repository: file://../../ml-testing-toolkit
+      tags:
+      - testing-toolkit
+      version: '>= 17.7.1'
+    - name: common
+      repository: https://mojaloop.github.io/charts/repo
+      tags:
+      - moja-common
+      version: 3.1.3
+    description: A Helm chart for Kubernetes
+    digest: 488e9378da2abbbfbb84bcb29c7e7045cbb09a1597f35a85b4b58ac60e7f1708
+    home: http://mojaloop.io
+    icon: http://mojaloop.io/images/logo.png
+    maintainers:
+    - email: miguel.debarros@modusbox.com
+      name: Miguel de Barros
+    - email: steven.oderayi@infitx.com
+      name: Steven Oderayi
+    name: mojaloop-ttk-sim2-svc
+    sources:
+    - https://github.com/mojaloop/mojaloop
+    - https://github.com/mojaloop/helm
+    - https://github.com/mojaloop/sdk-scheme-adapter
+    urls:
+    - https://mojalab-tg.github.io/charts/mojaloop/repo/mojaloop-ttk-sim2-svc-3.0.0.tgz
+    version: 3.0.0
+  mojaloop-ttk-sim3-svc:
+  - apiVersion: v2
+    appVersion: 'ml-testing-toolkit: v18.11.2; ml-testing-toolkit-ui: v16.2.0; sdk-scheme-adapter:
+      v24.6.3'
+    created: "2025-07-11T10:38:41.338159Z"
+    dependencies:
+    - condition: sdk-scheme-adapter.enabled
+      name: sdk-scheme-adapter
+      repository: file://../../sdk-scheme-adapter
+      tags:
+      - sdk-scheme-adapter
+      version: '>= 2.0.0'
+    - condition: ml-testing-toolkit.enabled
+      name: ml-testing-toolkit
+      repository: file://../../ml-testing-toolkit
+      tags:
+      - testing-toolkit
+      version: '>= 17.7.1'
+    - name: common
+      repository: https://mojaloop.github.io/charts/repo
+      tags:
+      - moja-common
+      version: 3.1.3
+    description: A Helm chart for Kubernetes
+    digest: b257bb33a68879ca2251ac00c2149518f43643a30a9049f6631b1c9d7c01884c
+    home: http://mojaloop.io
+    icon: http://mojaloop.io/images/logo.png
+    maintainers:
+    - email: miguel.debarros@modusbox.com
+      name: Miguel de Barros
+    - email: steven.oderayi@infitx.com
+      name: Steven Oderayi
+    name: mojaloop-ttk-sim3-svc
+    sources:
+    - https://github.com/mojaloop/mojaloop
+    - https://github.com/mojaloop/helm
+    - https://github.com/mojaloop/sdk-scheme-adapter
+    urls:
+    - https://mojalab-tg.github.io/charts/mojaloop/repo/mojaloop-ttk-sim3-svc-3.0.0.tgz
+    version: 3.0.0
+  mojaloop-ttk-simulators:
+  - apiVersion: v2
+    appVersion: 'ml-testing-toolkit: v18.11.2; ml-testing-toolkit-ui: v16.2.0; sdk-scheme-adapter:
+      v24.6.3'
+    created: "2025-07-11T10:38:41.3526Z"
+    dependencies:
+    - condition: mojaloop-ttk-sim1-svc.enabled
+      name: mojaloop-ttk-sim1-svc
+      repository: file://./chart-sim1
+      tags:
+      - mojaloop-simulator
+      - testing-toolkit
+      - sdk-scheme-adapter
+      version: '>= 3.0.0'
+    - condition: mojaloop-ttk-sim2-svc.enabled
+      name: mojaloop-ttk-sim2-svc
+      repository: file://./chart-sim2
+      tags:
+      - mojaloop-simulator
+      - testing-toolkit
+      - sdk-scheme-adapter
+      version: '>= 3.0.0'
+    - condition: mojaloop-ttk-sim3-svc.enabled
+      name: mojaloop-ttk-sim3-svc
+      repository: file://./chart-sim3
+      tags:
+      - mojaloop-simulator
+      - testing-toolkit
+      - sdk-scheme-adapter
+      version: '>= 3.0.0'
+    description: mojaloop-ttk-simulator Helm chart for Kubernetes
+    digest: 2e0ffe5ef017042dd7bf5d981ad3b92afa9ea77180ddf9e8d269d61e09603935
+    home: http://mojaloop.io
+    icon: http://mojaloop.io/images/logo.png
+    maintainers:
+    - email: miguel.debarros@modusbox.com
+      name: Miguel de Barros
+    - email: steven.oderayi@infitx.com
+      name: Steven Oderayi
+    name: mojaloop-ttk-simulators
+    sources:
+    - https://github.com/mojaloop/mojaloop
+    - https://github.com/mojaloop/helm
+    - https://github.com/mojaloop/sdk-scheme-adapter
+    urls:
+    - https://mojalab-tg.github.io/charts/mojaloop/repo/mojaloop-ttk-simulators-3.0.0.tgz
+    version: 3.0.0
+  ntpd:
+  - apiVersion: v2
+    appVersion: "1.0"
+    created: "2025-07-11T10:38:41.353254Z"
+    dependencies:
+    - name: common
+      repository: https://mojaloop.github.io/charts/repo
+      tags:
+      - moja-common
+      version: 3.1.3
+    description: ntpd Helm chart for Kubernetes
+    digest: eca75634d983d109376b2e7f0afe24ed6dc6fe6c328d4c4a7a1ad932d4462930
+    maintainers:
+    - email: miguel.debarros@modusbox.com
+      name: Miguel de Barros
+    name: ntpd
+    urls:
+    - https://mojalab-tg.github.io/charts/mojaloop/repo/ntpd-0.6.0.tgz
+    version: 0.6.0
+  promfana:
+  - apiVersion: v2
+    appVersion: 'Prometheus: v2.20.1; Grafana: v7.1.1'
+    created: "2025-07-11T10:38:41.357607Z"
+    dependencies:
+    - alias: prometheus
+      name: prometheus
+      repository: https://charts.helm.sh/stable
+      version: 11.12.0
+    - alias: grafana
+      name: grafana
+      repository: https://charts.helm.sh/stable
+      version: 5.5.5
+    - name: common
+      repository: https://mojaloop.github.io/charts/repo
+      tags:
+      - moja-common
+      version: 2.0.0
+    description: A Helm chart containing Prometheus & Grafana for Kubernetes
+    digest: 8849c4669c3979c73b1eeea16021a14d0a81a1f308430f7bc6f33a4018222908
+    maintainers:
+    - email: miguel.debarros@modusbox.com
+      name: Miguel de Barros
+    name: promfana
+    urls:
+    - https://mojalab-tg.github.io/charts/mojaloop/repo/promfana-11.1.0.tgz
+    version: 11.1.0
+  quoting-service:
+  - apiVersion: v2
+    appVersion: v17.7.1
+    created: "2025-07-11T10:38:41.359897Z"
+    dependencies:
+    - condition: quoting-service.enabled
+      name: quoting-service
+      repository: file://./chart-service
+      version: '>= 16.0.0'
+    - condition: quoting-service-handler.enabled
+      name: quoting-service-handler
+      repository: file://./chart-handler
+      version: '>= 16.0.0'
+    - name: common
+      repository: https://mojaloop.github.io/charts/repo
+      tags:
+      - moja-common
+      version: 3.1.3
+    description: Quoting-Service Helm chart for Kubernetes
+    digest: 8c5a51698b7a4d0817567be99875170aa7261173cbb19b3ce5d021085380dc39
+    home: http://mojaloop.io
+    icon: http://mojaloop.io/images/logo.png
+    maintainers:
+    - email: eugen.klymniuk@infitx.com
+      name: Eugen Klymniuk
+    - email: steven.oderayi@infitx.com
+      name: Steven Oderayi
+    name: quoting-service
+    sources:
+    - https://github.com/mojaloop/mojaloop
+    - https://github.com/mojaloop/helm
+    - https://github.com/mojaloop/quoting-service
+    urls:
+    - https://mojalab-tg.github.io/charts/mojaloop/repo/quoting-service-16.0.0.tgz
+    version: 16.0.0
+  sdk-scheme-adapter:
+  - apiVersion: v2
+    appVersion: v24.6.3
+    created: "2025-07-11T10:38:41.36223Z"
+    dependencies:
+    - alias: sdk-scheme-adapter-api-svc
+      condition: sdk-scheme-adapter-api-svc.enabled
+      name: sdk-scheme-adapter-svc
+      repository: file://./chart-service
+      tags:
+      - sdk-scheme-adapter
+      version: '>= 2.0.0'
+    - alias: sdk-scheme-adapter-dom-evt-handler
+      condition: sdk-scheme-adapter-dom-evt-handler.enabled
+      name: sdk-scheme-adapter-svc
+      repository: file://./chart-service
+      tags:
+      - sdk-scheme-adapter
+      version: '>= 2.0.0'
+    - alias: sdk-scheme-adapter-cmd-evt-handler
+      condition: sdk-scheme-adapter-cmd-evt-handler.enabled
+      name: sdk-scheme-adapter-svc
+      repository: file://./chart-service
+      tags:
+      - sdk-scheme-adapter
+      version: '>= 2.0.0'
+    - name: common
+      repository: https://mojaloop.github.io/charts/repo
+      tags:
+      - moja-common
+      version: 3.1.3
+    description: sdk-scheme-adapter Helm chart for Kubernetes
+    digest: 2c161a966fb502c44cd6f894cff1f4d02b353089cff598fe21e78866ff146ca7
+    home: http://mojaloop.io
+    icon: http://mojaloop.io/images/logo.png
+    maintainers:
+    - email: miguel.debarros@modusbox.com
+      name: Miguel de Barros
+    - email: steven.oderayi@infitx.com
+      name: Steven Oderayi
+    name: sdk-scheme-adapter
+    sources:
+    - https://github.com/mojaloop/mojaloop
+    - https://github.com/mojaloop/helm
+    - https://github.com/mojaloop/sdk-scheme-adapter
+    urls:
+    - https://mojalab-tg.github.io/charts/mojaloop/repo/sdk-scheme-adapter-2.0.0.tgz
+    version: 2.0.0
+  sdk-scheme-adapter-svc:
+  - apiVersion: v2
+    appVersion: v24.6.3
+    created: "2025-07-11T10:38:41.363296Z"
+    dependencies:
+    - name: common
+      repository: https://mojaloop.github.io/charts/repo
+      tags:
+      - moja-common
+      version: 3.1.3
+    description: A Helm chart for Kubernetes
+    digest: fbfe90e9bad45b7200eedc1030c478c24c3369debf45111a7b5d3b34c75cd1f2
+    home: http://mojaloop.io
+    icon: http://mojaloop.io/images/logo.png
+    maintainers:
+    - email: miguel.debarros@modusbox.com
+      name: Miguel de Barros
+    - email: steven.oderayi@infitx.com
+      name: Steven Oderayi
+    name: sdk-scheme-adapter-svc
+    sources:
+    - https://github.com/mojaloop/mojaloop
+    - https://github.com/mojaloop/helm
+    - https://github.com/mojaloop/sdk-scheme-adapter
+    urls:
+    - https://mojalab-tg.github.io/charts/mojaloop/repo/sdk-scheme-adapter-svc-2.0.0.tgz
+    version: 2.0.0
+  simulator:
+  - apiVersion: v2
+    appVersion: v12.2.5
+    created: "2025-07-11T10:38:41.364362Z"
+    dependencies:
+    - name: common
+      repository: https://mojaloop.github.io/charts/repo
+      tags:
+      - moja-common
+      version: 3.1.3
+    description: Simulator Helm Chart for Simulators
+    digest: 0c841512e1ce803a63136a27d65a891ada1b37e6ecdc29e2cdf59629f099c6a1
+    maintainers:
+    - email: miguel.debarros@modusbox.com
+      name: Miguel de Barros
+    name: simulator
+    urls:
+    - https://mojalab-tg.github.io/charts/mojaloop/repo/simulator-13.5.0.tgz
+    version: 13.5.0
+  thirdparty:
+  - apiVersion: v2
+    appVersion: 'auth-service: v15.1.2; als-consent-oracle: v1.0.1; thirdparty-sdk:
+      v15.1.3'
+    created: "2025-07-11T10:38:41.369713Z"
+    dependencies:
+    - condition: auth-svc.enabled
+      name: auth-svc
+      repository: file://./chart-auth-svc
+      version: '>= 3.5.0'
+    - condition: consent-oracle.enabled
+      name: consent-oracle
+      repository: file://./chart-consent-oracle
+      version: '>= 0.9.0'
+    - condition: tp-api-svc.enabled
+      name: tp-api-svc
+      repository: file://./chart-tp-api-svc
+      version: '>= 3.5.0'
+    - alias: thirdparty-simulator
+      condition: mojaloop-simulator.enabled
+      name: mojaloop-simulator
+      repository: file://../mojaloop-simulator
+      version: '>= 15.7.0'
+    - name: common
+      repository: https://mojaloop.github.io/charts/repo
+      tags:
+      - moja-common
+      version: 3.1.3
+    description: Third Party API Support for Mojaloop
+    digest: 071689e8d4236d256af1a67635d4cd385d6a375111d24cca45150012cba8eec0
+    home: http://mojaloop.io
+    icon: http://mojaloop.io/images/logo.png
+    maintainers:
+    - email: miguel.debarros@modusbox.com
+      name: Miguel de Barros
+    - email: steven.oderayi@infitx.com
+      name: Steven Oderayi
+    name: thirdparty
+    sources:
+    - https://github.com/mojaloop/mojaloop
+    - https://github.com/mojaloop/helm
+    - https://github.com/mojaloop/pisp-project
+    urls:
+    - https://mojalab-tg.github.io/charts/mojaloop/repo/thirdparty-3.18.0.tgz
+    version: 3.18.0
+  tp-api-svc:
+  - apiVersion: v2
+    appVersion: v15.0.2
+    created: "2025-07-11T10:38:41.370483Z"
+    dependencies:
+    - name: common
+      repository: https://mojaloop.github.io/charts/repo
+      tags:
+      - moja-common
+      version: 3.1.3
+    description: Thirdparty API Service chart for Mojaloop Thirdparty Overlay Services
+    digest: 3c97342853e157b5ed24aab003aeddcb46aac2f75b85f43fad3ab5da5af39a52
+    home: http://mojaloop.io
+    icon: http://mojaloop.io/images/logo.png
+    maintainers:
+    - email: miguel.debarros@modusbox.com
+      name: Miguel de Barros
+    name: tp-api-svc
+    sources:
+    - https://github.com/mojaloop/mojaloop
+    - https://github.com/mojaloop/helm
+    - https://github.com/mojaloop/thirdparty-api-svc
+    urls:
+    - https://mojalab-tg.github.io/charts/mojaloop/repo/tp-api-svc-3.5.0.tgz
+    version: 3.5.0
+  transaction-requests-service:
+  - apiVersion: v2
+    appVersion: 14.1.2
+    created: "2025-07-11T10:38:41.371358Z"
+    dependencies:
+    - name: common
+      repository: https://mojaloop.github.io/charts/repo
+      tags:
+      - moja-common
+      version: 3.1.3
+    description: Transaction-Requests-Service Helm chart for Kubernetes
+    digest: 37c49ddb5417c098bbfe9b411ab10aff80f19e7e89b787145a6998509c7512e1
+    home: http://mojaloop.io
+    icon: http://mojaloop.io/images/logo.png
+    maintainers:
+    - email: miguel.debarros@modusbox.com
+      name: Miguel de Barros
+    - email: steven.oderayi@infitx.com
+      name: Steven Oderayi
+    name: transaction-requests-service
+    sources:
+    - https://github.com/mojaloop/transaction-requests-service
+    - https://github.com/mojaloop/helm
+    urls:
+    - https://mojalab-tg.github.io/charts/mojaloop/repo/transaction-requests-service-13.6.0.tgz
+    version: 13.6.0
+generated: "2025-07-11T10:38:41.204377Z"
