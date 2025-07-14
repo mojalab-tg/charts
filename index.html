@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mojaloop Helm Charts</title>
+    <meta charset="utf-8">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        h1 { color: #333; }
+        pre { background: #f4f4f4; padding: 10px; border-radius: 5px; }
+        .instructions { background: #e7f3ff; padding: 15px; border-radius: 5px; margin: 20px 0; }
+    </style>
+</head>
+<body>
+    <h1>Mojaloop Helm Charts Repository</h1>
+    <div class="instructions">
+        <h2>Installation Instructions</h2>
+        <pre>
+helm repo add mojaloop https://mojalab-tg.github.io/charts/mojaloop/repo
+helm repo update
+helm search repo mojaloop --versions
+helm install my-release mojaloop/mojaloop
+        </pre>
+    </div>
+    <p>Browse the <a href="mojaloop/repo/index.yaml">Helm repository index</a></p>
+    <p>View available <a href="mojaloop/VERSIONS.md">versions documentation</a></p>
+</body>
+</html>
